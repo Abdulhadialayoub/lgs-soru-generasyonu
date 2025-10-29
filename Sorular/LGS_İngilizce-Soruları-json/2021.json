@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2021,
+        "question_number": 1,
+        "question_text": "Sally's friends are talking about Sally. Christina : She is the best student in our class. Her exam results are always good. Helen : We have similar interests and we like spending time together. Sue : We get on well and share our secrets with each other. Amanda : She is very good at Physics and Chemistry. Which two people talk about their own friendship with Sally?",
+        "option_a": "Christina and Sue",
+        "option_b": "Christina and Amanda",
+        "option_c": "Helen and Amanda",
+        "option_d": "Helen and Sue",
+        "correct_option": "D",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2021,
+        "question_number": 2,
+        "question_text": "You work at the call center of a company. You are talking to a customer on the phone. He has a problem with the device that he bought. According to the information above, what should you say to the customer to learn more about his problem?",
+        "option_a": "We will call you back when we solve your problem.",
+        "option_b": "Please call us if you have a problem again.",
+        "option_c": "Please give me some details about the problem.",
+        "option_d": "We'll solve your problem.",
+        "correct_option": "C",
+        "topic": "On The Phone"
+    },
+    {
+        "year": 2021,
+        "question_number": 3,
+        "question_text": "An amazing day! Your friend Jack went hang-gliding in Fethiye and shared the photo above. You posted a comment to say that you really liked the photo. What was your comment?",
+        "option_a": "I think this is one of your greatest photos.",
+        "option_b": "I have seen lots of similar photos.",
+        "option_c": "You look scared in this photo.",
+        "option_d": "You have shared this photo many times!",
+        "correct_option": "A",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2021,
+        "question_number": 4,
+        "question_text": "Jane wants to buy a concert ticket for Susan for her birthday. She reads Susan's comments on different bands in her blog. Susan's Comments: World of Rock - My best friend said nice things about this band but I don't think I will listen to them again. Rap Park - I have listened to them many times and I think they are great. Jazz Boys - Their music is not very good. They should improve themselves. Pop Time - The concert was boring. Their music is unbearable. According to the information above, which of the following bands' concert ticket is Jane going to buy for Susan?",
+        "option_a": "World of Rock",
+        "option_b": "Rap Park",
+        "option_c": "Jazz Boys",
+        "option_d": "Pop Time",
+        "correct_option": "B",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2021,
+        "question_number": 5,
+        "question_text": "Below, you see a conversation between a teacher and her students. Teacher: ----? Ted : I think it is the best music ever. Betty : I can't say that I like it. Lily : It makes me feel happy. Joe : I can't stand it, it is unbearable. Which of the following CANNOT be the teacher's question?",
+        "option_a": "What is your favorite type of music",
+        "option_b": "What is your opinion about rock music",
+        "option_c": "What do you think about jazz music",
+        "option_d": "What can you say about pop music",
+        "correct_option": "A",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2021,
+        "question_number": 6,
+        "question_text": "Every year thousands of people from all over the world come to Rome, Italy to attend the Pizza Vita Festival. This is one of the biggest food festivals in the world. In the festival, you can eat many different types of pizza, make your own pizza, enjoy folk music and buy local souvenirs. If you love pizza, don't miss this festival. Which of the following information is NOT in the text above?",
+        "option_a": "the place of the festival",
+        "option_b": "the name of the festival",
+        "option_c": "the type of the festival",
+        "option_d": "the date of the festival",
+        "correct_option": "D",
+        "topic": "Tourism"
+    },
+    {
+        "year": 2021,
+        "question_number": 7,
+        "question_text": "Laura has some guests for dinner but she will arrive home late after the guests. So, she asks her husband Matt to prepare the dinner before the guests arrive. According to the information above, which chore is Matt going to do before the guests arrive?",
+        "option_a": "vacuum the floor",
+        "option_b": "cook some meals",
+        "option_c": "do the laundry",
+        "option_d": "clean the windows",
+        "correct_option": "B",
+        "topic": "Chores"
+    },
+    {
+        "year": 2021,
+        "question_number": 8,
+        "question_text": "Tina is having a birthday party tomorrow. She invites her friends, but four of them have excuses and they can't go to the party. Andy: Thanks, but my cousins who are doctors are visiting us. Jessy: Thanks for your invitation, but I am going to the hospital to visit my grandfather who is ill. Terry: I'm sorry but I am ill. I have an appointment with my doctor. Amy: I'm afraid, I can't come. I'm going to the hospital to conduct a survey for my project. According to the responses above, who has an excuse about his/her own health?",
+        "option_a": "Andy",
+        "option_b": "Jessy",
+        "option_c": "Terry",
+        "option_d": "Amy",
+        "correct_option": "C",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2021,
+        "question_number": 9,
+        "question_text": "John did research on important inventors and their lives. Then, he filled in the table below. Inventor: Richard Trevithick invented: train in 1804, died in: 1833. Graham Bell invented: telephone in 1876, died in: 1922. Guglielmo Marconi invented: radio in 1896, died in: 1937. Philo Farnsworth invented: TV in 1927, died in: 1971. Konrad Zuse invented: computer in 1938, died in: 1995. According to John's table, which of the following was NOT possible?",
+        "option_a": "Graham Bell went to different places by train.",
+        "option_b": "Guglielmo Marconi played games on his computer.",
+        "option_c": "Philo Farnsworth listened to music on the radio.",
+        "option_d": "Konrad Zuse talked to his friends on the phone.",
+        "correct_option": "B",
+        "topic": "Science"
+    },
+    {
+        "year": 2021,
+        "question_number": 10,
+        "question_text": "Jenny and Amelia are students in Istanbul. They want to go to a cooking course together. Jenny can attend the course on weekdays. Amelia is busy only on Fridays. Jenny has ₺500 and Amelia can't pay more than ₺400. According to the information above, which of the following courses should Jenny and Amelia choose?",
+        "option_a": "Make Delicious - Course days: Monday and Wednesday - Price: ₺400",
+        "option_b": "Come and Cook - Course days: Tuesday and Wednesday - Price: ₺500",
+        "option_c": "Vegetable World - Course days: Saturday and Sunday - Price: ₺350",
+        "option_d": "Cook Well - Course days: Tuesday and Friday - Price: ₺300",
+        "correct_option": "A",
+        "topic": "In The Kitchen"
+    }
+]

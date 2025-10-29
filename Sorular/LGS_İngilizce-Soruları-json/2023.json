@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2023,
+        "question_number": 1,
+        "question_text": "Sandra and Mark are sharing their ideas about the Internet. Sandra believes that the Internet is useful but Mark doesn't think so. According to the information above, which of the following would Mark say?",
+        "option_a": "It is the easiest way of contacting our classmates, friends and relatives.",
+        "option_b": "Students spend too much time on social media when they are at school.",
+        "option_c": "Shopping and paying the bills online make my life easier.",
+        "option_d": "It helps us to find a lot of information in a short time.",
+        "correct_option": "B",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2023,
+        "question_number": 2,
+        "question_text": "Jane is talking about her responsibility at home. I like being in the kitchen, so I - - - -. According to the information above, which of the following completes Jane's sentence?",
+        "option_a": "take the dog for a walk",
+        "option_b": "clean the bathroom",
+        "option_c": "make the beds",
+        "option_d": "cook the meals",
+        "correct_option": "D",
+        "topic": "Chores"
+    },
+    {
+        "year": 2023,
+        "question_number": 3,
+        "question_text": "Antalya Trekking Tour - If you look for a great family adventure, come and join us! Date: July 21, Time: 6 a.m. - 7 p.m., The tour includes breakfast, lunch and dinner. According to the information above, which of the following is NOT correct?",
+        "option_a": "You can't join the tour with your parents.",
+        "option_b": "You don't have to bring food with you.",
+        "option_c": "It starts in the morning and finishes in the evening.",
+        "option_d": "The tour takes place in summer.",
+        "correct_option": "A",
+        "topic": "Tourism"
+    },
+    {
+        "year": 2023,
+        "question_number": 4,
+        "question_text": "Kübra wants to go to an English course to improve her English. She can attend the course after one o'clock in the afternoon during the weekends. She has ₺2500 for the course. According to the information above, which course should Kübra choose?",
+        "option_a": "English School 1 - Time: 8 - 10 a.m., Days: Saturday and Sunday, Price: ₺2200",
+        "option_b": "English School 2 - Time: 3 - 5 p.m., Days: Tuesday and Wednesday, Price: ₺2500",
+        "option_c": "English School 3 - Time: 5 - 7 p.m., Days: Monday and Sunday, Price: ₺3000",
+        "option_d": "English School 4 - Time: 2 - 4 p.m., Days: Saturday and Sunday, Price: ₺2300",
+        "correct_option": "D",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2023,
+        "question_number": 5,
+        "question_text": "Secretary : Hi. This is Dorothy. - - - -? Max : Hello. I'd like to talk to Mr. Johnson, please. Secretary : I'm sorry, but he is not available at the moment. - - - -? Max : Could you tell him to call me back, please? Secretary : Sure. - - - -? Max : Max Carter. It's 12345678. Which of the following does NOT fill in any of the blanks in the conversation above?",
+        "option_a": "Could you tell me your name and phone number, please",
+        "option_b": "Would you like to leave a message",
+        "option_c": "Could you please repeat that",
+        "option_d": "How can I help you",
+        "correct_option": "C",
+        "topic": "On The Phone"
+    },
+    {
+        "year": 2023,
+        "question_number": 6,
+        "question_text": "Anthony is going to do an extreme sport on Sunday. The main equipment for the sport is a parachute. According to the information above, which of the following extreme sports is Anthony going to do?",
+        "option_a": "Canoeing",
+        "option_b": "Skydiving",
+        "option_c": "Rafting",
+        "option_d": "Caving",
+        "correct_option": "B",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2023,
+        "question_number": 7,
+        "question_text": "There are four students in a cooking class. They are asking their teacher some questions about how to make a cake: How long does it take to bake the cake? Do we need two or three eggs? What are its main ingredients? Can we add some chocolate into the mixture? Which of the following CANNOT be the teacher's answer to any of the questions above?",
+        "option_a": "You will serve it cold.",
+        "option_b": "It takes about 20 minutes.",
+        "option_c": "They are flour, milk, eggs and sugar.",
+        "option_d": "Yes, it makes the cake more delicious.",
+        "correct_option": "A",
+        "topic": "In The Kitchen"
+    },  
+    {
+        "year": 2023,
+        "question_number": 8,
+        "question_text": "A group of friends are talking about their school party. Adam: I don't have any plans for next Sunday. So, I'll definitely be at the party. Claire: To me, 4 p.m. is too early to start the party. Pete: I think City Park is not a good place for the party. Tina: The ticket is too expensive for me. I'm not going to come. Who is talking about the location of the party?",
+        "option_a": "Adam",
+        "option_b": "Claire",
+        "option_c": "Pete",
+        "option_d": "Tina",
+        "correct_option": "C",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2023,
+        "question_number": 9,
+        "question_text": "Mr. White asks his students to prepare an invitation card including information about the place, time and type of the event. Which of the following cards includes all the information Mr. White asked for?",
+        "option_a": "Dear Alex, Why don't you join us on Sunday afternoon? I can pick you up from home. Ted",
+        "option_b": "Hi Kate, I have one more ticket for a pop concert. It is at Concert House. Shall we go together? Matt",
+        "option_c": "Hello Melinda, I'm having a movie night at my house at 8 p.m. on Sunday. It'll be great if you join us. Jill",
+        "option_d": "Hey Sam, We are organizing a birthday party. The party will be at 9 p.m. on Friday. Would you like to come? Sue",
+        "correct_option": "C",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2023,
+        "question_number": 10,
+        "question_text": "Read the questions that Matthew asked Emily. Matthew: In your opinion, what is the most important invention of the last century? Emily: - -. Matthew: Why do you think so? Emily: - - -. Matthew: Do you know who invented it? Emily: - - -. Which of the following CANNOT be one of Emily's answers?",
+        "option_a": "We can do many things with it and it makes our lives much easier",
+        "option_b": "I have forgotten her name, but she was from the USA",
+        "option_c": "It's difficult to tell, but I guess it's the computer",
+        "option_d": "Scientists are searching for life forms on other planets",
+        "correct_option": "D",
+        "topic": "Science"
+    }
+]
