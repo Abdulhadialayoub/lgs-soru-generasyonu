@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2020,
+        "question_number": 1,
+        "question_text": "Andy : Our basketball team plays a match this Saturday. The match starts at 2 p.m. Would you like to watch the match with us? David : - - - -. David accepts Andy's invitation. Which of the following can be David's answer to Andy?",
+        "option_a": "I'm sorry but I am having a picnic with my friends on Saturday",
+        "option_b": "Oh! It sounds awesome but I have to study for an exam",
+        "option_c": "I have to finish my project on Saturday but I'll join you",
+        "option_d": "I'm sorry but I have another plan on Saturday",
+        "correct_option": "C",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2020,
+        "question_number": 2,
+        "question_text": "Hi Jane, I am organizing a movie night on Friday evening. It will be fun! Would you like to come over? Hi Linda, I would really love to join you but my cousin is visiting me on Friday. Can she come with me? According to the conversation above, Jane - - - -.",
+        "option_a": "may come to the event if she can bring her guest with her",
+        "option_b": "will organize her own movie night on Friday evening",
+        "option_c": "does not like that kind of events",
+        "option_d": "does not want to watch a movie that night",
+        "correct_option": "A",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2020,
+        "question_number": 3,
+        "question_text": "Sam : I want to have steak for dinner. Can you cook it for me, mom? Mother: Sure. Sam : - - - -? Mother: About 30 minutes. Which of the following completes the conversation above?",
+        "option_a": "What are the ingredients",
+        "option_b": "Can you give me the recipe",
+        "option_c": "Do you need my help to cook it",
+        "option_d": "How long does it take to cook it",
+        "correct_option": "D",
+        "topic": "In The Kitchen"
+    },
+    {
+        "year": 2020,
+        "question_number": 4,
+        "question_text": "I. I'm sorry. He is not here at the moment. Would you like to leave a message? II. Hi, this is Kevin. How can I help you? III. Could you tell him to call me back, please? IV. Hi, this is Adam. May I speak to Frank, please? Which of the following is the correct order of the sentences in the phone conversation above?",
+        "option_a": "II - III - IV - I",
+        "option_b": "II - IV - I - III",
+        "option_c": "IV - I - II - III",
+        "option_d": "IV - III - II - I",
+        "correct_option": "B",
+        "topic": "On The Phone"
+    },
+    {
+        "year": 2020,
+        "question_number": 5,
+        "question_text": "This is Milo. It helps us with the kitchen chores. Which of the following is Milo's responsibility?",
+        "option_a": "Loading the dishwasher",
+        "option_b": "Taking the dog for a walk",
+        "option_c": "Ironing the clothes",
+        "option_d": "Making the bed",
+        "correct_option": "A",
+        "topic": "Chores"
+    },
+    {
+        "year": 2020,
+        "question_number": 6,
+        "question_text": "Scientific Inventions in Germany, The Biggest Experiments of the 20th Century, Scientific Achievements in Turkey. Daniel has read the books above. He wants to buy a new book on a similar topic. Which of the following books would Daniel buy next?",
+        "option_a": "Famous Sports Festivals",
+        "option_b": "Children's Poems",
+        "option_c": "Traditional Indian Food",
+        "option_d": "History of Modern Physics",
+        "correct_option": "D",
+        "topic": "Science"
+    },
+    {
+        "year": 2020,
+        "question_number": 7,
+        "question_text": "Mike is a university student in İstanbul. He is going to visit his friends in Ankara next weekend. He has ₺70 for transportation and he wants to go there in the shortest time possible. Which of the following should Mike prefer?",
+        "option_a": "Bus - ₺60 - 5 hours",
+        "option_b": "Plane - ₺100 - 1 hour",
+        "option_c": "Train - ₺40 - 8 hours",
+        "option_d": "Car - ₺80 - 4 hours",
+        "correct_option": "A",
+        "topic": "Tourism"
+    },
+    {
+        "year": 2020,
+        "question_number": 8,
+        "question_text": "Sandra's Blog - Hello friends. Today, I will answer your questions. Let's start with the first question. I love reading about famous people's lives ... Which of the following questions has Sandra answered in her blog?",
+        "option_a": "Where do you buy your favorite books?",
+        "option_b": "How many books do you read a month?",
+        "option_c": "When will you write about your own life?",
+        "option_d": "What kind of books do you like?",
+        "correct_option": "D",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2020,
+        "question_number": 9,
+        "question_text": "Cindy: I think it was an amazing experience! I will do it again. Tom: It was not exciting. I didn't find what I looked for. Fred: It was both challenging and exciting. I liked it. Kate: It was very dangerous. You shouldn't do it without your helmet. According to the comments above, who says something about safety?",
+        "option_a": "Cindy",
+        "option_b": "Fred",
+        "option_c": "Kate",
+        "option_d": "Tom",
+        "correct_option": "C",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2020,
+        "question_number": 10,
+        "question_text": "Tina (23 years old) - 340 people follow her. - She has 11 videos on the Internet. - Her videos have 300 likes. Nick (25 years old) - 450 people follow him. - He has 15 videos on the Internet. - His videos have 265 likes. According to the information about Tina's and Nick's social media accounts above, which of the following is NOT correct?",
+        "option_a": "Tina is younger than Nick.",
+        "option_b": "More people follow Tina.",
+        "option_c": "Nick has more videos.",
+        "option_d": "Nick has less likes.",
+        "correct_option": "B",
+        "topic": "The Internet"
+    }
+]
