@@ -16,6 +16,14 @@ class GeminiService:
         
         genai.configure(api_key=self.api_key)
         self.model = genai.GenerativeModel('gemini-2.5-flash')
+        # Optional feature flag for future cached content use
+        self.use_cached_content = os.getenv("USE_GEMINI_CACHE", "false").lower() == "true"
+        # Stable system instruction to standardize outputs
+        self.SYSTEM_INSTRUCTION = (
+            "Sen bir LGS İngilizce soru üretim uzmanısın. LGS seviyesinde, tek doğru cevaplı, "
+            "A/B/C/D seçenekli sorular üret. Çıktıyı her zaman geçerli JSON olarak ver. "
+            "Şema: { 'questions': [ { 'question_text', 'option_a', 'option_b', 'option_c', 'option_d', 'correct_option', 'explanation' } ] }."
+        )
     
     def get_similar_questions(self, topic: str = None, limit: int = 50) -> List[Dict]:
         """Belirli konudan veya tüm sorulardan benzer soruları getir"""
@@ -152,14 +160,68 @@ class GeminiService:
         except Exception as e:
             return {"error": f"Tahmin hatası: {str(e)}"}
     
+    def _format_vector_for_sql(self, vector: List[float]) -> str:
+        """pgvector için Python list -> '[...]' string formatı"""
+        return "[" + ",".join(f"{float(v):.6f}" for v in vector) + "]"
+
+    def embed_text(self, text: str) -> Optional[List[float]]:
+        """Metni embedding vektörüne çevir (text-embedding-004)."""
+        try:
+            result = genai.embed_content(
+                model="models/text-embedding-004",
+                content=text,
+                task_type="RETRIEVAL_QUERY"
+            )
+            # SDK bazen dict, bazen dot-access dönebilir; güvenli erişim
+            if isinstance(result, dict) and 'embedding' in result:
+                return result['embedding']
+            if hasattr(result, 'embedding'):
+                return getattr(result, 'embedding')
+            return None
+        except Exception:
+            return None
+
+    def get_similar_by_embedding(self, embedding: List[float], k: int = 8) -> List[Dict[str, Any]]:
+        """pgvector mesafesine göre en benzer k soruyu getir."""
+        try:
+            if not db.connection:
+                db.connect()
+            # embedding parametresi vector cast ile gönderilir
+            query = """
+                SELECT id, year, question_text, option_a, option_b, option_c, option_d,
+                       correct_option, topic
+                FROM lgs_questions
+                WHERE embedding IS NOT NULL
+                ORDER BY embedding <-> %s::vector
+                LIMIT %s
+            """
+            vec_param = self._format_vector_for_sql(embedding)
+            rows = db.execute_query(query, (vec_param, k))
+            return [dict(r) for r in rows] if rows else []
+        except Exception:
+            return []
+
+    def get_similar_by_text(self, text: str, k: int = 8) -> List[Dict[str, Any]]:
+        """Text'i embed edip pgvector ile benzer soruları getir; başarısızsa konu LIKE fallback."""
+        # 1) Embedding tabanlı arama
+        embedding = self.embed_text(text)
+        if embedding:
+            results = self.get_similar_by_embedding(embedding, k)
+            if results:
+                return results
+        # 2) Fallback: mevcut LIKE tabanlı sorgu
+        return self.get_similar_questions(topic=text, limit=k)
+
     def generate_questions(self, topic: str, count: int = 5, difficulty: str = "orta") -> List[Dict[str, Any]]:
         """Belirli konuda yeni sorular üret"""
         try:
-            similar_questions = self.get_similar_questions(topic=topic, limit=10)
+            # Önce embedding tabanlı benzer örnekleri getir (RAG)
+            similar_questions = self.get_similar_by_text(topic, k=10)
             
             if not similar_questions:
                 return [{"error": f"'{topic}' konusunda örnek soru bulunamadı"}]
             
+            # Few-shot örnekleri (3 adet, kısa ve öz)
             examples = []
             for q in similar_questions[:3]:
                 examples.append({
@@ -173,35 +235,18 @@ class GeminiService:
                     "correct": q['correct_option']
                 })
             
-            prompt = f"""
-            Sen bir LGS İngilizce soru uzmanısın. '{topic}' konusunda {count} adet yeni soru üret.
-
-            Zorluk seviyesi: {difficulty}
-            
-            Örnek sorular:
-            {json.dumps(examples, indent=2, ensure_ascii=False)}
-
-            Kurallar:
-            1. Sorular LGS seviyesinde olmalı
-            2. 4 seçenek (A, B, C, D) olmalı
-            3. Sadece 1 doğru cevap olmalı
-            4. Konuya uygun olmalı
-
-            Cevabını şu JSON formatında ver:
-            {{
-                "questions": [
-                    {{
-                        "question_text": "soru metni",
-                        "option_a": "A şıkkı",
-                        "option_b": "B şıkkı", 
-                        "option_c": "C şıkkı",
-                        "option_d": "D şıkkı",
-                        "correct_option": "A",
-                        "explanation": "neden bu cevap doğru"
-                    }}
-                ]
-            }}
-            """
+            # Sistem talimatı + dinamik kısım (örnekler dahil)
+            prompt = (
+                self.SYSTEM_INSTRUCTION
+                + "\n\nGörev: '{topic}' konusunda {count} adet yeni soru üret. Zorluk: {difficulty}.\n".format(
+                    topic=topic, count=count, difficulty=difficulty
+                )
+                + "\nÖrnek sorular (referans):\n"
+                + json.dumps(examples, indent=2, ensure_ascii=False)
+                + "\nKurallar:\n"
+                  "1) 4 seçenek A/B/C/D, 2) Tek doğru cevap, 3) LGS seviyesi, 4) Konuya uygun.\n"
+                + "Çıktı şeması:\n{\n  \"questions\": [ { \"question_text\", \"option_a\", \"option_b\", \"option_c\", \"option_d\", \"correct_option\", \"explanation\" } ]\n}\n"
+            )
             
             response = self.model.generate_content(prompt)
             
