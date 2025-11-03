@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2019,
+        "question_number": 1,
+        "question_text": "Read the comments about Jack. Jess: I know he always backs me up. Angelina: We really get on well. Tom: I can never count on him. Bill: He never shares my secrets with other people. According to the comments above, who says something bad about Jack?",
+        "option_a": "Jess",
+        "option_b": "Tom",
+        "option_c": "Bill",
+        "option_d": "Angelina",
+        "correct_option": "B",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2019,
+        "question_number": 2,
+        "question_text": "You work at a call center and answer customers' questions on the phone. You are there to solve their problems. According to the information above, which of the following you should NOT say?",
+        "option_a": "If you have a problem again, please contact us.",
+        "option_b": "Our friends will solve your problem today.",
+        "option_c": "I am too busy to solve your problem.",
+        "option_d": "After I talk to our team, I will call you.",
+        "correct_option": "C",
+        "topic": "On The Phone"
+    },
+    {
+        "year": 2019,
+        "question_number": 3,
+        "question_text": "Read the statements below. William : We must listen to our teachers while they are talking. Charles : We must come home early in the evenings. Jane : We mustn't drink or eat during our lessons. Rachel : We mustn't talk to each other during the exams. Who does NOT talk about school rules?",
+        "option_a": "William",
+        "option_b": "Charles",
+        "option_c": "Jane",
+        "option_d": "Rachel",
+        "correct_option": "B",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2019,
+        "question_number": 4,
+        "question_text": "Alice: There is too much black pepper in this soup. I hate - - - - food. Brad: This lemonade is really - - - -. Can you add some more sugar, please? George: My brother likes eating - - - - things. He always buys chocolate, cookies and cakes. Which of the following words CANNOT you use in any of the sentences above?",
+        "option_a": "sour",
+        "option_b": "sweet",
+        "option_c": "spicy",
+        "option_d": "salty",
+        "correct_option": "D",
+        "topic": "In The Kitchen"
+    },
+    {
+        "year": 2019,
+        "question_number": 5,
+        "question_text": "1: First, put some oil into a pan and heat it. 2: Add onions and peppers into the pan. 3: Your meal is ready. Enjoy! 4: Pour the eggs into the pan and add some salt. Then fry the mixture for 5 minutes. 5: Dice the tomatoes and add them into the pan. Which of the following steps of the recipe should change places to get the correct order of the cooking process?",
+        "option_a": "1 - 4",
+        "option_b": "2 - 3",
+        "option_c": "3 - 5",
+        "option_d": "1 - 5",
+        "correct_option": "C",
+        "topic": "Chores"
+    },
+    {
+        "year": 2019,
+        "question_number": 6,
+        "question_text": "Read the phone conversation below. Greg : Hello, It's \"Green Mobile\". How can I help you? Mr. Carter : Hello, my computer is not working properly. I think it is broken. Greg : Oh, OK, I understand. Can I take your address, please? Mr. Carter : 8 Freeway Street. Greg : Thank you. Our team will be there in an hour to check your computer. Mr. Carter : Thank you. Why does Mr. Carter call \"Green Mobile\"? To - - - -.",
+        "option_a": "tell \"Green Mobile\" about a problem",
+        "option_b": "buy a new computer",
+        "option_c": "change his home address",
+        "option_d": "say \"Thank you\" to \"Green Mobile\"",
+        "correct_option": "A",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2019,
+        "question_number": 7,
+        "question_text": "Dear friends, Our school basketball team has a match with a team from Johnson High School this Saturday at 3 p.m. Let's watch the match together! Ted. These are Ted's friends' plans for that day: Jason will study for his English exam on that day. Kevin has to stay with his grandparents. Matt likes basketball matches and he will be there. Sandy will meet her cousins. According to the information above, who will watch the match?",
+        "option_a": "Sandy",
+        "option_b": "Matt",
+        "option_c": "Kevin",
+        "option_d": "Jason",
+        "correct_option": "B",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2019,
+        "question_number": 8,
+        "question_text": "Tomorrow is Kate's birthday. So, Joe decides to buy her a book and asks Kate's friends about the books she has read or bought. These are their answers: Max : I know she has finished \"The Friendship\". Zack : She wanted to read \"The Old World\" and Jane bought it for her. Rose : She wanted to buy the book \"The Indian Music\" but she bought \"The Great Dog\". According to the information above, which of the following books should Joe buy for Kate?",
+        "option_a": "The Indian Music",
+        "option_b": "The Great Dog",
+        "option_c": "The Old World",
+        "option_d": "The Friendship",
+        "correct_option": "A",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2019,
+        "question_number": 9,
+        "question_text": "Read the information and the telephone conversation below. ENGLISH DAY - Come and Share Your English Project with us. - No rules, just fun! - All schools and students can join. Date : 20.06.2020, Time : 5 - 7 p.m., Place: Concert House, For more information call 0123 456 78 99. Suzanne : Hello, this is Suzanne Jordan, I'm calling you for the English Day event. Secretary : Hello Suzanne. How can I help you? Suzanne : What should I do to join the event? Secretary : - Suzanne : Oh, OK! Thank you. According to the information above, which of the following completes the conversation?",
+        "option_a": "You can't join if you are a student",
+        "option_b": "If you need more information, send an email, don't call",
+        "option_c": "The event will be in the morning, so come early",
+        "option_d": "Just bring your project to the Concert House",
+        "correct_option": "D",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2019,
+        "question_number": 10,
+        "question_text": "These are the results of a survey about the Internet habits of adults and teenagers. Adults: 10% Playing games, 10% Watching videos, 20% Reading news, 60% Sending messages to friends. Teenagers: 5% Reading news, 15% Sending messages to friends, 25% Watching videos, 55% Playing games. Which of the following is correct according to the results?",
+        "option_a": "Many adults like watching online videos.",
+        "option_b": "Teenagers prefer reading news to watching videos.",
+        "option_c": "Most of the adults enjoy sending messages.",
+        "option_d": "Teenagers hate playing online games.",
+        "correct_option": "C",
+        "topic": "Science"
+    }
+]

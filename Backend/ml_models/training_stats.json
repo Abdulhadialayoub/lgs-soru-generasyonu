@@ -1,0 +1,38 @@
+{
+  "total_questions": 70,
+  "unique_topics": 9,
+  "topic_distribution": {
+    "Friendship": 12,
+    "Teen Life": 11,
+    "The Internet": 9,
+    "In The Kitchen": 8,
+    "On The Phone": 7,
+    "Chores": 6,
+    "Tourism": 6,
+    "Adventures": 6,
+    "Science": 5
+  },
+  "model_type": "Gradient Boosting Classifier",
+  "n_estimators": 200,
+  "max_features": 1000,
+  "train_size": 56,
+  "test_size": 14,
+  "topic_accuracy": 35.71,
+  "f1_score": 33.57,
+  "oob_score": 0.0,
+  "cv_score": 50.0,
+  "top_features": [
+    "phone",
+    "school",
+    "weekend",
+    "friday",
+    "internet",
+    "don",
+    "clothes",
+    "chocolate",
+    "spend",
+    "tomato"
+  ],
+  "training_date": "2025-11-03T18:49:06.607092",
+  "data_quality_score": 100
+}
