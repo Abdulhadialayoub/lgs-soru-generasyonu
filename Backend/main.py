@@ -2,8 +2,10 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from database import db
 from gemini_service import gemini_service
+from ml_service import ml_service
 from typing import Optional
 import uvicorn
+import numpy as np
 
 app = FastAPI(
     title="LGS Soru Tahmin API",
@@ -434,6 +436,280 @@ def get_topic_distribution_data():
             "success": False,
             "message": f"Dağılım verisi hatası: {str(e)}",
             "data": {}
+        }
+
+# ============================================
+# ML MODEL ENDPOINTLERİ - YENİ!
+# ============================================
+
+@app.post("/api/ml/train")
+def train_ml_model(
+    topic: Optional[str] = Query(None, description="Belirli konu için eğit (opsiyonel)"),
+    limit: Optional[int] = Query(200, description="Eğitim verisi sayısı", ge=50, le=500),
+    model_type: Optional[str] = Query("ensemble", description="Model tipi: random_forest, gradient_boosting, veya ensemble")
+):
+    """
+    🤖 ML Modelini Eğit
+    
+    DB'deki geçmiş LGS sorularını kullanarak modeli eğitir.
+    
+    - **topic**: Belirli konu için eğit (boş bırakırsan tüm konular)
+    - **limit**: Kaç soru ile eğitilecek (50-500 arası)
+    - **model_type**: Model tipi
+    
+    **Model Tipleri:**
+    - naive_bayes: Az veri için EN İYİ! (70 soru için önerilen) ⭐
+    - random_forest: Hızlı, dengeli (200+ soru için)
+    - gradient_boosting: Yüksek accuracy (200+ soru için)
+    - ensemble: 3 model birleşimi (500+ soru için)
+    
+    Eğitim sonrası model accuracy, F1 score ve istatistikler döner.
+    """
+    try:
+        if model_type not in ["random_forest", "gradient_boosting", "ensemble"]:
+            return {
+                "success": False,
+                "message": "model_type 'random_forest', 'gradient_boosting' veya 'ensemble' olmalı",
+                "stats": {}
+            }
+        
+        result = ml_service.train_model(topic=topic, limit=limit, model_type=model_type)
+        return result
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Model eğitim hatası: {str(e)}",
+            "stats": {}
+        }
+
+@app.post("/api/ml/generate")
+def generate_with_ml_model(
+    topic: Optional[str] = Query(None, description="Belirli konu (opsiyonel)"),
+    count: Optional[int] = Query(5, description="Soru sayısı", ge=1, le=20),
+    difficulty: Optional[str] = Query("orta", description="Zorluk: kolay, orta, zor")
+):
+    """
+    🎯 Eğitilmiş Modelle Soru Üret
+    
+    Önceden eğitilmiş ML modeli kullanarak yeni sorular üretir.
+    **DB'ye kaydetmez**, sadece üretir ve döner.
+    
+    - **topic**: Belirli konu için soru üret (boş bırakırsan karma)
+    - **count**: Kaç soru üretilecek (1-20)
+    - **difficulty**: Zorluk seviyesi
+    
+    ⚠️ Not: Önce /api/ml/train endpoint'ini çağırmalısınız!
+    
+    Dönen veri:
+    - Üretilen sorular
+    - Model accuracy
+    - Başarı oranı
+    - Eğitim istatistikleri
+    """
+    try:
+        if difficulty not in ["kolay", "orta", "zor"]:
+            return {
+                "success": False,
+                "message": "Zorluk 'kolay', 'orta' veya 'zor' olmalı",
+                "questions": [],
+                "model_info": {}
+            }
+        
+        result = ml_service.generate_questions_with_model(
+            topic=topic,
+            count=count,
+            difficulty=difficulty
+        )
+        
+        return result
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Soru üretme hatası: {str(e)}",
+            "questions": [],
+            "model_info": {}
+        }
+
+@app.get("/api/ml/status")
+def get_ml_model_status():
+    """
+    📊 ML Model Durumu
+    
+    Modelin eğitim durumunu, accuracy'sini ve istatistiklerini gösterir.
+    
+    Dönen bilgiler:
+    - Model eğitildi mi?
+    - Model accuracy (%)
+    - Eğitim verisi boyutu
+    - Veri kalitesi skoru
+    - Son eğitim tarihi
+    """
+    try:
+        status = ml_service.get_model_status()
+        
+        return {
+            "success": True,
+            "message": "Model durumu başarıyla getirildi",
+            "data": status
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Model durumu getirme hatası: {str(e)}",
+            "data": {}
+        }
+
+@app.post("/api/ml/train-and-generate")
+def train_and_generate_questions(
+    topic: Optional[str] = Query(None, description="Belirli konu (opsiyonel)"),
+    training_limit: Optional[int] = Query(200, description="Eğitim verisi sayısı", ge=50, le=500),
+    question_count: Optional[int] = Query(5, description="Üretilecek soru sayısı", ge=1, le=20),
+    difficulty: Optional[str] = Query("orta", description="Zorluk: kolay, orta, zor"),
+    model_type: Optional[str] = Query("ensemble", description="Model tipi: random_forest, gradient_boosting, veya ensemble")
+):
+    """
+    🚀 Tek Seferde: Eğit + Üret
+    
+    Gerçek ML modelini eğitir (Random Forest) ve hemen ardından yeni sorular üretir.
+    **DB'ye kaydetmez**, sadece üretir.
+    
+    - **topic**: Belirli konu (boş bırakırsan tüm konular)
+    - **training_limit**: Kaç soru ile eğitilecek (50-500)
+    - **question_count**: Kaç soru üretilecek (1-20)
+    - **difficulty**: Zorluk seviyesi
+    
+    Dönen veri:
+    - Eğitim istatistikleri (TF-IDF, Random Forest)
+    - Model accuracy (gerçek ML accuracy)
+    - Üretilen sorular
+    - Başarı oranı
+    """
+    try:
+        # 1. Modeli eğit
+        training_result = ml_service.train_model(topic=topic, limit=training_limit, model_type=model_type)
+        
+        if not training_result.get('success', False):
+            return {
+                "success": False,
+                "message": "Model eğitilemedi",
+                "training_result": training_result,
+                "questions": []
+            }
+        
+        # 2. Soru üret
+        generation_result = ml_service.generate_questions_with_model(
+            topic=topic,
+            count=question_count,
+            difficulty=difficulty
+        )
+        
+        if not generation_result.get('success', False):
+            return {
+                "success": False,
+                "message": "Sorular üretilemedi",
+                "training_result": training_result,
+                "generation_result": generation_result
+            }
+        
+        # 3. Birleştirilmiş sonuç
+        return {
+            "success": True,
+            "message": f"ML Model eğitildi ve {len(generation_result['questions'])} soru üretildi",
+            "training_stats": training_result['stats'],
+            "model_info": generation_result['model_info'],
+            "questions": generation_result['questions'],
+            "generation_stats": generation_result.get('generation_stats', {}),
+            "summary": {
+                "training_data_size": training_result['stats'].get('total_questions', 0),
+                "model_type": training_result['stats'].get('model_type', 'Random Forest'),
+                "model_accuracy": generation_result['model_info'].get('accuracy', 0),
+                "generation_success_rate": generation_result['model_info'].get('generation_success_rate', 0),
+                "data_quality": generation_result['model_info'].get('data_quality', 0),
+                "generated_count": len(generation_result['questions']),
+                "top_features": generation_result['model_info'].get('top_features', [])
+            }
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Eğitim ve üretim hatası: {str(e)}",
+            "training_result": {},
+            "questions": []
+        }
+
+@app.post("/api/ml/predict-topic")
+def predict_question_topic(
+    question_text: str = Query(..., description="Soru metni")
+):
+    """
+    🔮 Soru Metninden Konu Tahmini
+    
+    Eğitilmiş ML modeli kullanarak soru metninden konu tahmini yapar.
+    
+    - **question_text**: Tahmin edilecek soru metni
+    
+    Dönen veri:
+    - Tahmin edilen konu
+    - Güven skoru (%)
+    - Top 3 tahmin
+    """
+    try:
+        prediction = ml_service.predict_topic(question_text)
+        
+        if 'error' in prediction:
+            return {
+                "success": False,
+                "message": prediction['error'],
+                "prediction": {}
+            }
+        
+        return {
+            "success": True,
+            "message": "Konu tahmini başarılı",
+            "prediction": prediction,
+            "question_text": question_text
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Tahmin hatası: {str(e)}",
+            "prediction": {}
+        }
+
+@app.get("/api/ml/debug")
+def debug_ml_model():
+    """
+    🔧 ML Model Debug Bilgileri
+    
+    Model durumu ve debug bilgilerini gösterir.
+    """
+    try:
+        import sys
+        import sklearn
+        
+        return {
+            "success": True,
+            "debug_info": {
+                "python_version": sys.version,
+                "sklearn_version": sklearn.__version__,
+                "numpy_version": np.__version__,
+                "model_status": ml_service.get_model_status(),
+                "model_files_exist": {
+                    "classifier": (ml_service.model_dir / "topic_classifier.pkl").exists(),
+                    "vectorizer": (ml_service.model_dir / "vectorizer.pkl").exists(),
+                    "encoder": (ml_service.model_dir / "label_encoder.pkl").exists()
+                }
+            }
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Debug hatası: {str(e)}"
         }
 
 if __name__ == "__main__":

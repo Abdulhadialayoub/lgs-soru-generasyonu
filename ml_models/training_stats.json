@@ -1,0 +1,27 @@
+{
+  "total_questions": 70,
+  "unique_topics": 9,
+  "topic_distribution": {
+    "Friendship": 12,
+    "Teen Life": 11,
+    "The Internet": 9,
+    "In The Kitchen": 8,
+    "On The Phone": 7,
+    "Chores": 6,
+    "Tourism": 6,
+    "Adventures": 6,
+    "Science": 5
+  },
+  "model_type": "Ensemble (RF + GB + LR)",
+  "n_estimators": 200,
+  "max_features": 1000,
+  "train_size": 56,
+  "test_size": 14,
+  "topic_accuracy": 21.43,
+  "f1_score": 14.8,
+  "oob_score": null,
+  "cv_score": 48.57,
+  "top_features": [],
+  "training_date": "2025-11-04T09:52:59.280808",
+  "data_quality_score": 100
+}
