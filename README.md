@@ -395,67 +395,9 @@ AI model durumu ve soru üretim süreci
 ![PDF Export](https://res.cloudinary.com/dtmebvljq/image/upload/v1762455257/WhatsApp_Image_2025-11-05_at_22.08.54_4_qph4wv.jpg)
 Profesyonel PDF formatında sınav çıktısı
 
-## Proje Yapısı
 
 
-lgs-soru-generasyonu/
-├── Backend/
-│   ├── main.py                      # FastAPI ana uygulama
-│   ├── gemini_service.py            # Gemini AI entegrasyonu
-│   ├── mcp_service.py               # MCP Protocol implementasyonu
-│   ├── database.py                  # Database bağlantı yönetimi
-│   ├── models.py                    # Pydantic modelleri
-│   ├── create_statistics_table.py   # İstatistik tablosu oluşturma
-│   ├── calculate_topic_weights.py   # Konu ağırlık hesaplama
-│   ├── embeddings_olustur.py        # Vector embeddings üretimi
-│   ├── requirements.txt             # Python bağımlılıkları
-│   ├── .env                         # Environment variables
-│   └── .gitignore                   # Git ignore kuralları
-├── Frontend/                        # (Frontend kodu ayrı repo'da)
-└── README.md                        # Bu dosya
 
-
-### Veritabanı Şeması
-
-sql
--- Ana soru tablosu
-lgs_questions (
-    id SERIAL PRIMARY KEY,
-    year INTEGER,
-    question_number INTEGER,
-    question_text TEXT,
-    option_a TEXT,
-    option_b TEXT,
-    option_c TEXT,
-    option_d TEXT,
-    correct_option VARCHAR(1),
-    topic VARCHAR(255),
-    embedding VECTOR(768)  -- pgvector
-)
-
--- İstatistik cache tablosu
-lgs_statistics (
-    id SERIAL PRIMARY KEY,
-    topic VARCHAR(255),
-    year INTEGER,
-    question_count INTEGER,
-    percentage DECIMAL(5,2),
-    total_questions_in_year INTEGER,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP,
-    UNIQUE(topic, year)
-)
-
--- Konu ağırlık cache tablosu
-topic_weights_cache (
-    id SERIAL PRIMARY KEY,
-    topic VARCHAR(255) UNIQUE,
-    weight INTEGER,
-    total_questions INTEGER,
-    percentage DECIMAL(5,2),
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
-)
 
 
 ## Model Eğitimi ve Fine-tuning
