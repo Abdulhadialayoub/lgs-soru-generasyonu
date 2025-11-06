@@ -610,39 +610,6 @@ NEXT_PUBLIC_APP_NAME=LGS Soru Üretim Sistemi
 NEXT_PUBLIC_ENABLE_ANALYTICS=false
 
 
-### Proje Yapısı
-
-
-Frontend/
-├── src/
-│   ├── components/          # Reusable components
-│   │   ├── Dashboard/
-│   │   ├── QuestionSolver/
-│   │   ├── AIGenerator/
-│   │   ├── ExamSimulator/
-│   │   └── Statistics/
-│   ├── pages/              # Page components
-│   │   ├── index.js
-│   │   ├── dashboard.js
-│   │   ├── solve.js
-│   │   ├── generate.js
-│   │   ├── exam.js
-│   │   └── stats.js
-│   ├── services/           # API services
-│   │   ├── api.js
-│   │   ├── questionService.js
-│   │   └── examService.js
-│   ├── store/              # State management
-│   │   ├── slices/
-│   │   └── store.js
-│   ├── utils/              # Utility functions
-│   │   ├── helpers.js
-│   │   └── constants.js
-│   └── styles/             # Global styles
-│       └── globals.css
-├── public/                 # Static assets
-├── package.json
-└── next.config.js
 
 
 ## Güvenlik
