@@ -1,0 +1,265 @@
+.ml-model {
+  max-width: 1400px;
+}
+
+.ml-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.status-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.status-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.generated-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.generated-question {
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fafafa;
+}
+
+.option {
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.option:hover {
+  border-color: #3b82f6;
+}
+
+.option.correct {
+  background: #d1fae5;
+  border-color: #10b981;
+  font-weight: 500;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.question-number {
+  font-weight: 700;
+  color: #3b82f6;
+  font-size: 1.125rem;
+}
+
+.question-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.correct-answer {
+  color: #10b981;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ml-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .generated-questions {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .ml-status-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .status-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .status-icon {
+    margin-bottom: 0.5rem;
+  }
+  
+  .generated-question {
+    padding: 1rem;
+  }
+  
+  .exam-results {
+    padding: 1rem;
+  }
+  
+  .score-display {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-value {
+    font-size: 1rem;
+  }
+  
+  .generated-questions {
+    max-height: 50vh;
+  }
+  
+  .generated-question {
+    padding: 0.75rem;
+  }
+  
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .option {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .form-input,
+  .form-select {
+    font-size: 0.875rem;
+  }
+}
+
+.option.selected {
+  background: #f3f4f6;
+  border-color: #6b7280;
+  border-width: 2px;
+  position: relative;
+}
+
+.option.selected::before {
+  content: '✓';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.option.wrong {
+  background: #fee2e2;
+  border-color: #ef4444;
+  font-weight: 500;
+}
+
+.exam-results {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0.75rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.exam-results h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.score-display {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.score-value.correct {
+  color: #10b981;
+}
+
+.score-value.wrong {
+  color: #ef4444;
+}
+
+.score-value.percentage {
+  color: #fbbf24;
+}
+
+.user-answer {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.user-answer.correct {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.user-answer.wrong {
+  background: #fee2e2;
+  color: #991b1b;
+}
