@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2017,
+        "question_number": 1,
+        "question_text": "My cousin, Mary, feels worried if she is offline even for a few hours. I think she - - - -.",
+        "option_a": "is a real Internet addict",
+        "option_b": "hates social networking sites",
+        "option_c": "gets bored when she uses the Net",
+        "option_d": "dislikes spending long hours on the Net",
+        "correct_option": "A",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2017,
+        "question_number": 2,
+        "question_text": "Kevin : What type of cities do you like most, historical or modern?  Kate : Historical cities are my favourite because - - - -.",
+        "option_a": "I don't find them exciting",
+        "option_b": "their architecture is fascinating",
+        "option_c": "they are not impressive enough",
+        "option_d": "modern cities are more interesting",
+        "correct_option": "B",
+        "topic": "Tourism"
+    },
+    {
+        "year": 2017,
+        "question_number": 3,
+        "question_text": "Mark : I am going to see my sister in the afternoon. Would you like to come with me?  Sarah : Why not? - - - -? Mark : In front of the cinema. We want to watch a movie together.",
+        "option_a": "Who will you go out with",
+        "option_b": "What are you going to buy",
+        "option_c": "What time will you go there",
+        "option_d": "Where are you going to meet",
+        "correct_option": "D",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2017,
+        "question_number": 4,
+        "question_text": "Erica : Hi, Laura. How are things?  Laura : I feel terrible because Paul has had a bad accident. He has been in the hospital for three days.  Erica : I am sorry to hear that! - - - -  Laura : Thanks for your good wishes.",
+        "option_a": "Do you need any help?",
+        "option_b": "I read the news on the Net.",
+        "option_c": "What's wrong with him?",
+        "option_d": "I hope he gets better soon.",
+        "correct_option": "D",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2017,
+        "question_number": 5,
+        "question_text": "Carla loves wearing trendy clothes, so she spends a lot of money on them.  Which place would she prefer to visit?",
+        "option_a": "Amusement Park",
+        "option_b": "Space Museum",
+        "option_c": "Shopping Centre",
+        "option_d": "Cinema",
+        "correct_option": "C",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2017,
+        "question_number": 6,
+        "question_text": "TOMATO SALAD - Wash some tomatoes, onions and parsley. Cut the vegetables into small pieces. Put the vegetables in a bowl and mix them. Add some olive oil. Enjoy it! Which of the following shows the last step of the recipe?",
+        "option_a": "Pouring oil on the salad",
+        "option_b": "Cutting vegetables",
+        "option_c": "Washing dishes",
+        "option_d": "Mixing the salad",
+        "correct_option": "A",
+        "topic": "In The Kitchen"
+    },
+    {
+        "year": 2017,
+        "question_number": 7,
+        "question_text": "Sam always prefers doing activities with his friends outside. Which of the following shows the activity that Sam prefers doing?",
+        "option_a": "Taking photos",
+        "option_b": "Cooking food",
+        "option_c": "Going camping",
+        "option_d": "Watching TV",
+        "correct_option": "C",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2017,
+        "question_number": 8,
+        "question_text": "Jane's to-do list: + do the laundry, + make the bed, + take out the garbage, + dust the furniture. Which of the following shows a chore in Jane's to-do list?",
+        "option_a": "Ironing clothes",
+        "option_b": "Dusting furniture",
+        "option_c": "Eating food",
+        "option_d": "Washing dishes",
+        "correct_option": "B",
+        "topic": "Chores"
+    },
+    {
+        "year": 2017,
+        "question_number": 9,
+        "question_text": "MY TRIP TO PARIS Hi friends! Welcome to my blog. You know I was in Paris last weekend. On the first day of my trip, I visited the Louvre Museum. I even took a photo of Mona Lisa's painting. On Sunday, I visited the Eiffel Tower. Watching Paris from the top of the Eiffel Tower was very exciting for me. Wait for my new trips to new places. Until then, bye! Larry tells us about - - - -.",
+        "option_a": "his next flight to Paris",
+        "option_b": "taking photos from the Eiffel Tower",
+        "option_c": "the history of the Louvre Museum",
+        "option_d": "some well-known places in Paris",
+        "correct_option": "D",
+        "topic": "Tourism"
+    },
+    {
+        "year": 2017,
+        "question_number": 10,
+        "question_text": "MY TRIP TO PARIS Hi friends! Welcome to my blog. You know I was in Paris last weekend. On the first day of my trip, I visited the Louvre Museum. I even took a photo of Mona Lisa's painting. On Sunday, I visited the Eiffel Tower. Watching Paris from the top of the Eiffel Tower was very exciting for me. Wait for my new trips to new places. Until then, bye! Larry - - - -.",
+        "option_a": "spent a week in Paris",
+        "option_b": "saw Mona Lisa's painting",
+        "option_c": "took a photo of the Eiffel Tower",
+        "option_d": "visited the Louvre Museum on Sunday",
+        "correct_option": "B",
+        "topic": "Tourism"
+    }
+]

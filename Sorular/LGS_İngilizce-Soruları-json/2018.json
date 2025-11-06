@@ -1,0 +1,112 @@
+[
+    {
+        "year": 2018,
+        "question_number": 1,
+        "question_text": "Marcy: We have similar interests. Lisa: Tim is always cool. Mel: We have fun together. Sam: He always tells the truth. According to the information above, who thinks Tim is an honest friend?",
+        "option_a": "Marcy",
+        "option_b": "Lisa",
+        "option_c": "Mel",
+        "option_d": "Sam",
+        "correct_option": "D",
+        "topic": "Friendship"
+    },
+    {
+        "year": 2018,
+        "question_number": 2,
+        "question_text": "This afternoon, Jane's mother is coming home from a short trip. Jane's mother can't stand dirty dishes. Which of the following chores must Jane finish before her mother comes home?",
+        "option_a": "vacuum the floor",
+        "option_b": "wash the dishes",
+        "option_c": "iron the clothes",
+        "option_d": "clean the windows",
+        "correct_option": "B",
+        "topic": "Chores"
+    },
+    {
+        "year": 2018,
+        "question_number": 3,
+        "question_text": "Fill in the blank according to the table below. Amanda's Exams: Subject - Day, Chemistry - Monday, History - Tuesday, Physics - Wednesday, English - Friday. Amanda has the - - - -.",
+        "option_a": "chemistry exam after she has the English exam",
+        "option_b": "history and physics exams on the same day",
+        "option_c": "physics exam two days after the chemistry exam",
+        "option_d": "English exam before she has the history exam",
+        "correct_option": "C",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2018,
+        "question_number": 4,
+        "question_text": "Mike : Good afternoon. This is Mike. Sally : Good afternoon, Mike. This is Sally. Mike : - - - - Sally : Hold on a moment, please. I'll get him. Which of the following DOES NOT complete the conversation?",
+        "option_a": "Is Nick there?",
+        "option_b": "Nick has gone out.",
+        "option_c": "I want to talk to Nick.",
+        "option_d": "May I speak to Nick?",
+        "correct_option": "B",
+        "topic": "On The Phone"
+    },
+    {
+        "year": 2018,
+        "question_number": 5,
+        "question_text": "David and Martin decided to read the same book and discuss it later. Here are the lists of their personal interests: David • cars • computers • football, Martin • basketball • cooking • health. Choose the book that both David and Martin will enjoy reading.",
+        "option_a": "Rules of Popular Sports",
+        "option_b": "Healthy Cooking",
+        "option_c": "Computers Today",
+        "option_d": "New Cars",
+        "correct_option": "A",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2018,
+        "question_number": 6,
+        "question_text": "Gary : Hello everybody! Today, our guest is Michael Miller. What is your favorite sport, Michael? Michael : It's paragliding. Gary : - - - -? Michael : Twice a week. Gary : - - - -? Michael : Watching the scenery is fascinating. Gary : - - - -? Michael : A helmet and a parachute. Which of the following questions DOES NOT Gary ask Michael?",
+        "option_a": "How often do you do it",
+        "option_b": "Why do you like it",
+        "option_c": "What do you need for it",
+        "option_d": "Where do you try it",
+        "correct_option": "D",
+        "topic": "Adventures"
+    },
+    {
+        "year": 2018,
+        "question_number": 7,
+        "question_text": "Researchers asked teenagers and adults about the types of transportation they preferred. Here are the results: Number of people - Bus Adults 60, Bus Teenagers 10, Car Adults 10, Car Teenagers 20, Plane Adults 20, Plane Teenagers 10, Train Adults 10, Train Teenagers 60. Which of the following is CORRECT according to the results?",
+        "option_a": "Travelling by bus is popular among teenagers.",
+        "option_b": "Teenagers mostly travel by train.",
+        "option_c": "Adults always travel by plane.",
+        "option_d": "Adults never travel by car.",
+        "correct_option": "B",
+        "topic": "Teen Life"
+    },
+    {
+        "year": 2018,
+        "question_number": 8,
+        "question_text": "NIKOLA TESLA - A Famous Scientist - Nikola Tesla was born on July 10, 1856. He became interested in physics when he was just a small boy. He learned different languages, because he wanted to read about scientific achievements in different parts of the world. He invented many new things during his life. In this paragraph, there is NO information about Tesla's - - - -.",
+        "option_a": "relatives",
+        "option_b": "achievements",
+        "option_c": "birthday",
+        "option_d": "early age",
+        "correct_option": "A",
+        "topic": "Science"
+    },
+    {
+        "year": 2018,
+        "question_number": 9,
+        "question_text": "The table below shows the results of a study on daily Internet activities of 100 teens in Japan. Internet activities | Number of teens: reading news | 5, shopping online | 5, checking emails | 10, doing homework | 15, watching movies | 20, playing games | 45. According to the results, which of the following is CORRECT?",
+        "option_a": "Shopping online is very popular among teens in Japan.",
+        "option_b": "Most of the students use the Internet to do their homework.",
+        "option_c": "Nearly half of the students spend their time checking their emails and reading the news.",
+        "option_d": "Many of the teens spend time playing games and watching movies.",
+        "correct_option": "D",
+        "topic": "The Internet"
+    },
+    {
+        "year": 2018,
+        "question_number": 10,
+        "question_text": "These are the steps from Lily's video about making a delicious dessert: Step 1: Put some milk, sugar, flour and vanilla in a saucepan. Step 2: Heat the mixture in the saucepan and stir it. Step 3: Pour the mixture into the bowls. Step 4: Put some pieces of chocolate on each mixture. Lily is talking about making a delicious dessert. Which of the following steps DOES NOT match with one of the steps above?",
+        "option_a": "Put some milk, sugar, flour and vanilla in a saucepan.",
+        "option_b": "Heat the mixture in the saucepan and stir it.",
+        "option_c": "Peel the fruits and chop them into small pieces.",
+        "option_d": "Pour the mixture into the bowls and put some pieces of chocolate on each mixture.",
+        "correct_option": "C",
+        "topic": "In The Kitchen"
+    }
+]
