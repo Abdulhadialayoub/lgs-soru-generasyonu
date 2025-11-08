@@ -8,9 +8,10 @@ AI destekli, vektör veritabanı tabanlı akıllı soru üretim platformu
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## İçindekiler
-
 - [Genel Bakış](#genel-bakış)
 - [Sistem Mimarisi](#sistem-mimarisi)
+- [Canlı Uygulama Linki](#canlı-uygulama-linki)
+- [Swagger API Dokümantasyonu](#swagger-api-dokümantasyonu)
 - [Özellikler](#özellikler)
 - [Teknoloji Stack](#teknoloji-stack)
 - [Kurulum](#kurulum)
@@ -18,6 +19,7 @@ AI destekli, vektör veritabanı tabanlı akıllı soru üretim platformu
 - [Ekran Görüntüleri](#ekran-görüntüleri)
 - [Proje Yapısı](#proje-yapısı)
 - [Performans](#performans)
+
 
 
 ## Genel Bakış
@@ -118,11 +120,20 @@ MCP server, AI modelini veritabanına "bağlı" gibi çalıştırmamızı sağla
 ![Sistem Mimarisi](https://res.cloudinary.com/dtmebvljq/image/upload/v1762456056/fastapi_vtoss5.png)
 
 
+
+
+
 ### Veri Akışı
 
 1. **Soru Üretme**: Frontend → API → MCP Server → Gemini AI → Vector DB → Response
 2. **Tahmin**: Frontend → API → Statistics Engine → ML Model → Prediction
 3. **Sınav Oluşturma**: Frontend → API → Balance Algorithm → Topic Weights → Exam
+
+## Canlı Uygulama Linki
+[LGS Soru Üretim Canlı](https://lgs-soru-generasyonu-exbd.vercel.app)
+
+## Swagger API Dokümantasyonu
+[API Dokümantasyonu (Swagger)](https://lgs-soru-api-latest.onrender.com/docs)
 
 ## Özellikler
 
